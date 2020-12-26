@@ -1,0 +1,3 @@
+#/bin/bash
+sed -i 's/HOST_COMPILER ?= g++/HOST_COMPILER ?= g++-6/g' Makefile
+sed -i 's/NVCCFLAGS   := -m${TARGET_SIZE}/NVCCFLAGS   := -m${TARGET_SIZE} -I\/usr\/local\/cuda-10.0\/samples\/common\/inc\//g' Makefile

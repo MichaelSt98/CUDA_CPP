@@ -1,0 +1,2 @@
+sed -i 's/HOST_COMPILER ?= g++/HOST_COMPILER ?= g++-6/g' Makefile
+sed -i 's/NVCCFLAGS   := -m/NVCCFLAGS   := -m -I\/usr\/local\/cuda-10.0\/samples\/common\/inc\//g' Makefile
