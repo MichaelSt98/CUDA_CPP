@@ -9,5 +9,9 @@ do
     echo ""
     cat ${dir##*/}/readme.txt
     echo ""
+    echo "### Sample output"
+    echo ""
+    ./${dir##*/}/${dir##*/}
+    echo ""
     echo ""
 done
