@@ -1,1 +1,7 @@
 .idea/
+
+NVIDIA_examples/7_CUDALibraries/simpleCUFFT_callback/simpleCUFFT_callback
+NVIDIA_examples/bin/x86_64/linux/release/simpleCUFFT_callback
+
+NVIDIA_examples/7_CUDALibraries/MersenneTwisterGP11213/MersenneTwisterGP11213
+NVIDIA_examples/bin/x86_64/linux/release/MersenneTwisterGP11213
