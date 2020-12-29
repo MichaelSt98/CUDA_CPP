@@ -48,9 +48,9 @@ endif
 PROJECTS := $(filter-out $(FILTER_OUT),$(PROJECTS))
 
 %.ph_build :
-	cp replace_strings $(dir $*)
-	chmod 755 $(dir $*)replace_strings
-	$(dir $*)replace_strings
+	@cp replace_strings $(dir $*)
+	@chmod 755 $(dir $*)replace_strings
+	@$(dir $*)replace_strings
 	+@$(MAKE) -C $(dir $*) $(MAKECMDGOALS)
 
 %.ph_clean : 
