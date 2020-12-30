@@ -165,11 +165,11 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0, int length = 4
  
 int main(int argc, char** argv)
 {
-    if (argc < 2) {
-        int verbosity = 2;
+
+    int verbosity { 2 };
     }
-    else {
-        int verbosity = std::stoi(argv[1]);
+    if argc > 1 {
+        verbosity = std::stoi(argv[1]);
     }
 
     // Number of CUDA devices
