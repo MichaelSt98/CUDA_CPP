@@ -1,9 +1,9 @@
-include <stdio.h>
+#include <stdio.h>
  
 // Print device properties
 void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0)
 {
-    printf("---------------------------------------------------------------")
+    printf("---------------------------------------------------------------\n");
     if (amount_of_info >= 0) {
         printf("Name:                          \t%s\n", devProp.name);
         printf("Major revision number:         \t%d\n", devProp.major);
@@ -33,7 +33,7 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0)
     if (amount_of_info >= 3) {
         printf("Kernel execution timeout:      \t%s\n", (devProp.kernelExecTimeoutEnabled ? "Yes" : "No"));
         printf("ECCEnabled:                    \t%s\n", devProp.ECCEnabled ? "Yes" : "No");
-        printf("accessPolicyMaxWindowSize:     \t%d\n", devProp.accessPolicyMaxWindowSize);
+        //printf("accessPolicyMaxWindowSize:     \t%d\n", devProp.accessPolicyMaxWindowSize);
         printf("asyncEngineCount:              \t%d\n", devProp.asyncEngineCount);
         printf("canMapHostMemory:              \t%d\n", devProp.canMapHostMemory);
         printf("canUseHostPointerForRegMem:    \t%d\n", devProp.canUseHostPointerForRegisteredMem);
@@ -55,7 +55,7 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0)
         printf("luid:                          \t%s\n", devProp.luid);
         printf("luidDeviceNodeMask:            \t%d\n", devProp.luidDeviceNodeMask);
         printf("managedMemory                  \t%d\n", devProp.managedMemory);
-        printf("maxBlocksPerMultiProcessor:    \t%d\n", devProp.maxBlocksPerMultiProcessor);
+        //printf("maxBlocksPerMultiProcessor:    \t%d\n", devProp.maxBlocksPerMultiProcessor);
         for (int i = 0; i < 3; ++i) {
             printf("maxGridSize dim       %d:      \t%d\n", i, devProp.maxGridSize[i]);
         }
@@ -122,10 +122,10 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0)
         printf("pciBusID:                         \t%d\n", devProp.pciBusID);
         printf("pciDeviceID:                      \t%d\n", devProp.pciDeviceID);
         printf("pciDomainID:                      \t%d\n", devProp.pciDomainID);
-        printf("persistingL2CacheMaxSize:         \t%d\n", devProp.persistingL2CacheMaxSize);
+        //printf("persistingL2CacheMaxSize:         \t%d\n", devProp.persistingL2CacheMaxSize);
         printf("regsPerBlock:                     \t%d\n", devProp.regsPerBlock);
         printf("regsPerMultiprocessor:            \t%d\n", devProp.regsPerMultiprocessor);
-        printf("reservedSharedMemPerBlock:        \t%zu\n", devProp.reservedSharedMemPerBlock);
+        //printf("reservedSharedMemPerBlock:        \t%zu\n", devProp.reservedSharedMemPerBlock);
         printf("sharedMemPerBlock:                \t%zu\n", devProp.sharedMemPerBlock);
         printf("sharedMemPerBlockOptin:           \t%zu\n", devProp.sharedMemPerBlockOptin);
         printf("sharedMemPerMultiprocessor:       \t%zu\n", devProp.sharedMemPerMultiprocessor);
@@ -139,9 +139,9 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0)
         printf("totalGlobalMem:                   \t%zu\n", devProp.totalGlobalMem);
         printf("unifiedAddressing:                \t%d\n", devProp.unifiedAddressing);
 
-        %cudaUUID_t  uuid
+        //cudaUUID_t  uuid
     }
-    printf("---------------------------------------------------------------")
+    printf("---------------------------------------------------------------\n");
 }
  
 int main()
@@ -159,7 +159,7 @@ int main()
         printf("\nCUDA Device number: %d\n", i);
         cudaDeviceProp devProp;
         cudaGetDeviceProperties(&devProp, i);
-        printDevProp(devProp);
+        printDevProp(devProp, 3);
     }
  
     //printf("\nPress any key to exit...");
