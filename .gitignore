@@ -1,4 +1,5 @@
 .idea/
+.DS_STORE/
 
 NVIDIA_examples/bin/
 
