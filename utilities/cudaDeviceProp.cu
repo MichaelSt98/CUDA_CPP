@@ -177,7 +177,8 @@ int main(int argc, char* argv[])
     cudaGetDeviceCount(&devCount);
     std::cout << "CUDA Device Query..." << std::endl;
     std::cout << "There are " << devCount << " CUDA devices.";
- 
+    std::cout << std::endl << std::endl; 
+
     // Iterate through devices
     for (int i = 0; i < devCount; ++i)
     {
