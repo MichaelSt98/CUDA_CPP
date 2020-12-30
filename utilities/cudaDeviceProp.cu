@@ -168,14 +168,14 @@ int main()
     // Number of CUDA devices
     int devCount;
     cudaGetDeviceCount(&devCount);
-    print(length, "CUDA Device Query...\n");
-    print(length, "There are %d CUDA devices.\n", devCount);
+    std::cout << "CUDA Device Query..." << std::endl;
+    std::cout << "There are " << devCount << " CUDA devices.";
  
     // Iterate through devices
     for (int i = 0; i < devCount; ++i)
     {
         // Get device properties
-        print(length, "\nCUDA Device number: %d\n", i);
+	    std::cout << std::endl << "CUDA Device number: " << i << std::endl;
         cudaDeviceProp devProp;
         cudaGetDeviceProperties(&devProp, i);
         printDevProp(devProp, 3);
