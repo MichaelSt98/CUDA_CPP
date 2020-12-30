@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
+#include <cstdlib>
 
 template<typename T_1, typename T_2> void print(int length, T_1 description, T_2 value, int dim=-1) {
     std::ostringstream s_description;
@@ -165,7 +166,6 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0, int length = 4
  
 int main(int argc, char* argv[])
 {
-
     int verbosity { 2 };
     }
     if argc > 1 {
