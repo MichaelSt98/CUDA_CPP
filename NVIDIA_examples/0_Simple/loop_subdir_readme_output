@@ -11,7 +11,7 @@ do
     echo ""
     echo "### Sample output"
     echo ""
-    ./${dir##*/}/${dir##*/}
+    ./${dir##*/}/${dir##*/} || echo "Problems with ${dir##*/}"
     echo ""
     echo ""
 done
