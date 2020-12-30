@@ -169,7 +169,7 @@ int main(int argc, char* argv[])
     int verbosity { 2 };
     }
     if argc > 1 {
-        verbosity = std::stoi(argv[1]);
+        verbosity = std::atoi(argv[1]);
     }
 
     // Number of CUDA devices
