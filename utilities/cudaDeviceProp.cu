@@ -167,8 +167,8 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0, int length = 4
 int main(int argc, char* argv[])
 {
     int verbosity { 2 };
-    }
-    if argc > 1 {
+
+    if (argc > 1) {
         verbosity = std::atoi(argv[1]);
     }
 
