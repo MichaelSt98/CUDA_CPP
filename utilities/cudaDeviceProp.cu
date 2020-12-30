@@ -163,7 +163,7 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0, int length = 4
     std::cout << "---------------------------------------------------------------" << std::endl;
 }
  
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
 
     int verbosity { 2 };
