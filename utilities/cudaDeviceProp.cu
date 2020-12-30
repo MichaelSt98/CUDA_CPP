@@ -165,7 +165,7 @@ void printDevProp(cudaDeviceProp devProp, int amount_of_info = 0, int length = 4
  
 int main(int argc, char** argv)
 {
-    if argc < 2 {
+    if (argc < 2) {
         int verbosity = 2;
     }
     else {
@@ -185,7 +185,7 @@ int main(int argc, char** argv)
 	    std::cout << std::endl << "CUDA Device number: " << i << std::endl;
         cudaDeviceProp devProp;
         cudaGetDeviceProperties(&devProp, i);
-        printDevProp(devProp, 3);
+        printDevProp(devProp, verbosity);
     }
  
     //print(length, "\nPress any key to exit...");
